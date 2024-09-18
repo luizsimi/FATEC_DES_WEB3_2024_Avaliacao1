@@ -21,6 +21,12 @@ livros = [
   },
 ]
 
+#Consultar
+@app.route('/livros',methods[GET])
+def obter_livros():
+    return jsonify(livros)
+
+
 
 
 
