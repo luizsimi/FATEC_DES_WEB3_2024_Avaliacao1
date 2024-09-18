@@ -26,15 +26,10 @@ livros = [
 def obter_livros():
     return jsonify(livros)
 
-
-
-
-
-
-
-
-
-
-
-
+#consultarID
+@app.route('/livros/<int:id>',methods=['GET'])
+def obter_livro_por_id(id):
+    for livro in livros:
+        if livro.get('id') == id:
+            return jsonify(livro)
 
